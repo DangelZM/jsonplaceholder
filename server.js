@@ -1,10 +1,14 @@
 var express  = require('express');
+var cors     = require('cors');
+var Users    = require('./users.json');
+
 var app      = express();
-var Users = require('./users.json');
 var UsersArray = Users.reduce(function(memo, item){
     memo[item.id] = item;
     return memo;
 }, []);
+
+app.use(cors());
 
 app.get('/users', function (req, res, next) {
     res.send(Users);
