@@ -5,6 +5,7 @@
     "start": "nodemon server.js"
   },
   "dependencies": {
+    "cors": "^2.7.1",
     "express": "^4.13.4"
   },
   "devDependencies": {
